@@ -3,6 +3,7 @@ package controllers;
 import domain.Rebelde;
 import domain.SelectionSort;
 import enums.FieldsEnum;
+import interfaces.Ordenacao;
 import lombok.Cleanup;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,8 +48,8 @@ public class InteligenciaCentral {
         }
     }
 
-    public void ordenarRebeldesAprovados(FieldsEnum fieldsEnum){
-        List<Rebelde> rebeldeListOrdenada = SelectionSort.selectionSortBy(this.getRebeldesAprovados(), fieldsEnum);
+    public void ordenarRebeldesAprovados(Ordenacao ordenacao, FieldsEnum fieldsEnum){
+        List<Rebelde> rebeldeListOrdenada = ordenacao.sortBy(this.getRebeldesAprovados(), fieldsEnum);
         this.setRebeldesAprovados(rebeldeListOrdenada);
     }
 

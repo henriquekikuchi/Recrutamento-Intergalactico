@@ -1,8 +1,8 @@
 import controllers.InteligenciaCentral;
 import domain.Rebelde;
-import domain.SelectionSort;
 import enums.FieldsEnum;
 import enums.RacasEnum;
+import implementacaoInterfaces.SelectionSort;
 import views.CadastroRebeldesView;
 import views.OrdenacaoRebeldesView;
 import views.RebeldeView;
@@ -17,7 +17,7 @@ public class ProcessoSeletivoIntergalacticoApplication {
         InteligenciaCentral ic = new InteligenciaCentral();
         CadastroRebeldesView.iniciarCadastroRebeldes(ic);
         FieldsEnum fieldsEnum = OrdenacaoRebeldesView.iniciarOrdenacaoRebeldes(ic);
-        ic.ordenarRebeldesAprovados(fieldsEnum);
+        ic.ordenarRebeldesAprovados(new SelectionSort(), fieldsEnum);
         ic.imprimirAprovados();
 
     }

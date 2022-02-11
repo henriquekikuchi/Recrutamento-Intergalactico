@@ -1,31 +1,28 @@
-package domain;
+package implementacaoInterfaces;
 
+import domain.Rebelde;
 import enums.FieldsEnum;
-import implementacaoInterfaces.CompararPorIdade;
-import implementacaoInterfaces.CompararPorNome;
-import implementacaoInterfaces.CompararPorRaca;
 import interfaces.Comparacao;
-import lombok.AllArgsConstructor;
+import interfaces.Ordenacao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@AllArgsConstructor
-public class SelectionSort {
-
-    public static ArrayList<Rebelde> selectionSortBy(List<Rebelde> rebeldeList, FieldsEnum fieldParaOrdenar) {
+public class SelectionSort implements Ordenacao {
+    @Override
+    public ArrayList<Rebelde> sortBy(List<Rebelde> rebeldeList, FieldsEnum fieldParaOrdenar) {
         ArrayList<Rebelde> rebeldesLinkedList = null;
         switch (fieldParaOrdenar.getDescricao()) {
             case "Nome":
-                rebeldesLinkedList = selectionSort(rebeldeList, new CompararPorNome());
+                rebeldesLinkedList = sort(rebeldeList, new CompararPorNome());
                 break;
             case "Idade":
-                rebeldesLinkedList = selectionSort(rebeldeList, new CompararPorIdade());
+                rebeldesLinkedList = sort(rebeldeList, new CompararPorIdade());
                 break;
             case "Raca":
-                rebeldesLinkedList = selectionSort(rebeldeList, new CompararPorRaca());
+                rebeldesLinkedList = sort(rebeldeList, new CompararPorRaca());
                 break;
             default:
                 System.out.println("Opção invalida!");
@@ -33,7 +30,8 @@ public class SelectionSort {
         return rebeldesLinkedList;
     }
 
-    private static ArrayList<Rebelde> selectionSort(List<Rebelde> rebeldeList, Comparacao comparar) {
+    @Override
+    public ArrayList<Rebelde> sort(List<Rebelde> rebeldeList, Comparacao comparar) {
         Rebelde[] rebeldes = rebeldeList.toArray(Rebelde[]::new);
 
         for (int i = 0; i < rebeldes.length; i++){
@@ -52,6 +50,4 @@ public class SelectionSort {
         Arrays.stream(rebeldes).forEach(x -> System.out.println(x.toString()));
         return (ArrayList<Rebelde>) Arrays.stream(rebeldes).collect(Collectors.toList());
     }
-
 }
-
