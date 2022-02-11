@@ -1,7 +1,6 @@
 package controllers;
 
 import domain.Rebelde;
-import domain.SelectionSort;
 import enums.FieldsEnum;
 import interfaces.Ordenacao;
 import lombok.Cleanup;
@@ -11,7 +10,6 @@ import lombok.Setter;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.util.*;
 import java.util.stream.Collectors;
 
