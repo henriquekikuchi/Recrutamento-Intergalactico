@@ -55,7 +55,7 @@ public class InteligenciaCentral {
 
     private boolean testeDeAptidao(Rebelde rebelde){
         String[] possiveisRespostas = {"Apto","Inapto"};
-        int resultado = new Random().nextInt(1);
+        int resultado = new Random().nextInt(2);
         if (possiveisRespostas[resultado] == "Apto") {
             System.out.println("Parabens você foi aprovado!");
             return true;
