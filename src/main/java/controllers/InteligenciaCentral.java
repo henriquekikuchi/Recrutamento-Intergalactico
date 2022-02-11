@@ -1,6 +1,7 @@
 package controllers;
 
 import domain.Rebelde;
+import domain.SelectionSort;
 import enums.FieldsEnum;
 import lombok.Cleanup;
 import lombok.Getter;
@@ -46,6 +47,10 @@ public class InteligenciaCentral {
         }
     }
 
+    public void ordenarRebeldesAprovados(FieldsEnum fieldsEnum){
+        List<Rebelde> rebeldeListOrdenada = SelectionSort.selectionSortBy(this.getRebeldesAprovados(), fieldsEnum);
+        this.setRebeldesAprovados(rebeldeListOrdenada);
+    }
 
     private boolean testeDeAptidao(Rebelde rebelde){
         String[] possiveisRespostas = {"Apto","Inapto"};

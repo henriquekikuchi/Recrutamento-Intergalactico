@@ -11,7 +11,7 @@ import lombok.Data;
 public class Rebelde {
 
     private String nome;
-    private int idade;
+    private Integer idade;
     private RacasEnum raca;
 
     @Override
