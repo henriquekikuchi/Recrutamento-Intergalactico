@@ -11,7 +11,7 @@ Como é muito pró-ativa, a IC deverá **imprimir na tela** e gerar um **arquivo
 e suas informações. **Antes de imprimir, a IC deve perguntar em qual ordem os rebeldes deverão ser listados: 
 Nome, Idade ou Raça e apresentar o resultado (impresso e no arquivo) conforme a opção selecionada.**
 
-##Regras:
+## Regras:
 1. Lembre-se dos recursos e assuntos que aprendemos no módulo anterior, serão bem valiosos!
 2. Deverá ser utilizado um gerenciador de dependências para controlar qualquer biblioteca externa que seja utilizada no projeto - A escolha é livre,
 **Maven ou Gradle** será aceito;
