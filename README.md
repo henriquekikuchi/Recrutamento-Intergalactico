@@ -16,5 +16,5 @@ Nome, Idade ou Raça e apresentar o resultado (impresso e no arquivo) conforme a
 2. Deverá ser utilizado um gerenciador de dependências para controlar qualquer biblioteca externa que seja utilizada no projeto - A escolha é livre,
 **Maven ou Gradle** será aceito;
 3. Você deverá utilizar o Lombok como um acelerador e ajudar a diminuir a quantidade de linhas escritas em seu projeto;
-4. **Deverá ser utilizado pelo menos uma estrutura de dados abordada neste módulo: Fila, Pilha, Lista Encadeada ou Map;
-5. A ordenação dos rebeldes deve utilizar um dos algoritmos de ordenação apresentados nas aulas.**
+4. **Deverá ser utilizado pelo menos uma estrutura de dados abordada neste módulo: Fila, Pilha, Lista Encadeada ou Map;**
+5. **A ordenação dos rebeldes deve utilizar um dos algoritmos de ordenação apresentados nas aulas.**
